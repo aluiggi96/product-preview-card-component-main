@@ -91,6 +91,9 @@ body{
     .imgMobile{
         display: block;
     }
+    .container{
+        align-items: stretch;
+    }
     .fullViewCard{
         margin: 1.5rem 1rem;
         grid-template-columns: 1fr;

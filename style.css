@@ -1,0 +1,110 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 14px;
+}
+body{
+    background-color: hsl(30, 38%, 92%);
+    font-family: 'Montserrat', serif;
+    font-weight: 500;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.fullViewCard{
+    max-width: 720px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-radius: 15px;
+    overflow: hidden;
+}
+.imgDesktop, .imgMobile{
+    display: block;
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+.imgMobile{
+    display: none;
+}
+.rightSide{
+    display: grid;
+    align-content: space-between;
+    padding: 2rem;
+    background-color: hsl(0, 0%, 100%);
+}
+.cardTitle, .description{
+    font-weight: 500;
+    font-family: 'Montserrat';
+    color: hsl(228, 12%, 48%)
+}
+.cardTitle{
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+.productName{
+    font-family: 'Fraunces';
+    font-weight: 700;
+    font-size: 3rem;
+    line-height: 1;
+}
+.description{
+    line-height: 1.5;
+}
+.price{
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+.actualPrice{
+    color: hsl(158, 36%, 37%);
+    font-family: 'Fraunces';
+    font-size: 3rem;
+}
+.beforePrice{
+    color: hsl(228, 12%, 48%);
+    text-decoration: line-through;
+}
+.button{
+    display: flex;
+    padding: 1.5rem;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    border-radius: 15px;
+    color: hsl(0, 0%, 100%);
+    font-weight: 700;
+    background-color: hsl(158, 36%, 37%);
+}
+
+@media only screen and (max-width: 426px) {
+    .imgDesktop{
+        display: none;
+    }
+    .imgMobile{
+        display: block;
+    }
+    .fullViewCard{
+        margin: 1.5rem 1rem;
+        grid-template-columns: 1fr;
+    }
+    .bottomSide{
+        gap: 2rem;
+    }
+    .cardTitle, .description, .beforePrice{
+        font-size: 1rem;
+    }
+    .productName, .actualPrice{
+        font-size: 2rem;
+    }
+    .button{
+        padding: 1rem;
+    }
+}

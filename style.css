@@ -84,7 +84,7 @@ body{
     background-color: hsl(158, 36%, 37%);
 }
 
-@media only screen and (max-width: 426px) {
+@media only screen and (max-width: 721px) {
     .imgDesktop{
         display: none;
     }
